@@ -1,0 +1,28 @@
+<h1>Tax Calculation</h1>
+
+<%= form_for (@validate) do |f| %>
+  <% if @validate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@validate.errors.count, "error") %> prohibited this slab from being saved:</h2>
+
+      <ul>
+      <% @validate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :cess %><br />
+    <%= f.text_field :cess %>
+  </div>
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+

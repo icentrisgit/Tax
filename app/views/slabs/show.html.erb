@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Slab from:</b>
+  <%= @slab.slab_from %>
+</p>
+
+<p>
+  <b>Slab to:</b>
+  <%= @slab.slab_to %>
+</p>
+
+<p>
+  <b>Slab percentage:</b>
+  <%= @slab.slab_percentage %>
+</p>
+
+<p>
+  <b>Min tax:</b>
+  <%= @slab.min_tax %>
+</p>
+
+
+<%= link_to 'Edit', edit_slab_path(@slab) %> |
+<%= link_to 'Back', slabs_path %>

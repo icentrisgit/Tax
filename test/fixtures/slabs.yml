@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  slab_from: MyString
+  slab_to: MyString
+  slab_percentage: MyString
+  min_tax: MyString
+
+two:
+  slab_from: MyString
+  slab_to: MyString
+  slab_percentage: MyString
+  min_tax: MyString

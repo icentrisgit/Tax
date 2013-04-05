@@ -1,0 +1,24 @@
+<%= form_for @caltax do |f| %>
+  <div class="field">
+  	<% if @caltax.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@caltax.errors.count, "error") %> prohibited this slab from being saved:</h2>
+
+      <ul>
+      <% @caltax.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :cess %><br />
+    <%= f.text_field :cess %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

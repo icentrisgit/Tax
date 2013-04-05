@@ -1,0 +1,29 @@
+<h1>Listing slabs</h1>
+
+<table>
+  <tr>
+    <th>Slab from</th>
+    <th>Slab to</th>
+    <th>Slab percentage</th>
+    <th>Min tax</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @slabs.each do |slab| %>
+  <tr>
+    <td><%= slab.slab_from %></td>
+    <td><%= slab.slab_to %></td>
+    <td><%= slab.slab_percentage %></td>
+    <td><%= slab.min_tax %></td>
+    <td><%= link_to 'Show', slab %></td>
+    <td><%= link_to 'Edit', edit_slab_path(slab) %></td>
+    <td><%= link_to 'Destroy', slab, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Slab', new_slab_path %>
